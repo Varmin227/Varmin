@@ -59,3 +59,6 @@ body .main>div {
 .main h2 {
      text-transform: uppercase;
 }
+.main div section {
+    height: 1000px;
+}
