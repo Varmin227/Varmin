@@ -55,10 +55,8 @@ body .main>div {
     padding-right: 50px;
     width: 90%;
     padding-bottom: 20px;
+    height: 1000px;
 }
 .main h2 {
      text-transform: uppercase;
-}
-.main div section {
-    height: 1000px;
 }
