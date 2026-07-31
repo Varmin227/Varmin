@@ -1,0 +1,61 @@
+body {
+    background-color: azure;
+}
+#header-nav {
+  background-color: #f6b319;
+  border-radius: 0;
+  border: 0;
+}
+.navbar-default {
+    background-color: aqua;
+}
+.navbar-brand {
+    font-size: 30px;
+}
+#nav-list {
+    margin-top: 70px;
+    width:100%;
+    text-align:center;
+}
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.main {
+    vertical-align: middle;
+    text-align: center;
+}
+.main>section{
+    text-align: center;
+    font-weight: 600;
+    color: #f6b319;
+    vertical-align: auto;
+    font-size: 30px;
+}
+body .main>div {
+    position: relative;
+    text-align: center;
+    background-color: bisque;
+    border: black solid 2px;
+    margin:50px 50px 50px 50px;
+    padding-right: 50px;
+    width: 90%;
+    padding-bottom: 20px;
+}
+.main h2 {
+     text-transform: uppercase;
+}
