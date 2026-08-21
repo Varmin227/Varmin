@@ -21,10 +21,21 @@ body {
     transform: translate(-50%, -50%);
 }
 .navbar {
-    float: left;
-    width: 300px;
+    width: auto;
     height: 600px;
-    background-color: lightblue; 
+    margin-bottom: 0;
+    background-color: lightblue;
+}
+#main .main-part {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    align-items: start;
+}
+.content {
+    padding: 0 30px;
+}
+.content h2 {
+    margin-top: 0;
 }
 #list {
     list-style: none;
@@ -36,22 +47,36 @@ body {
     margin: 0;
     font-size: 20px;
     font-weight: bold;
-    color: blue;
+    color: grey;
 
 }
 #list li a:hover {
     opacity: 0.8;
     color: red;
-    text-shadow: 1px 1px 1px black;
 }
-.main-part a{
+.main-part h2 {
     font-size: 35px;
     font-weight: bold;
-    text-decoration: none;
     color: black;
 }
-.main-part>div {
+.content {
     color: black;
-    margin: 0px 0px 0px 330px;
     font-size: 15px;
+    margin-top: 10px;
+}
+.content p {
+    padding: 0px 20px;
+}
+.content p:hover {
+    color:blue;
+}
+
+@media (max-width: 767px) {
+    #main .main-part {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        height: auto;
+    }
 }
