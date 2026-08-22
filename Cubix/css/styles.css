@@ -22,9 +22,15 @@ body {
 }
 .navbar {
     width: auto;
-    height: 600px;
+    height: 100vh;
     margin-bottom: 0;
-    background-color: lightblue;
+    background-color: grey;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: 10;
 }
 #main .main-part {
     display: grid;
@@ -44,11 +50,10 @@ body {
 }
 #list li a{
     padding: 0;
-    margin: 0;
+    margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: grey;
-
+    color: black;
 }
 #list li a:hover {
     opacity: 0.8;
@@ -57,7 +62,7 @@ body {
 .main-part h2 {
     font-size: 35px;
     font-weight: bold;
-    color: black;
+    color: blue;
 }
 .content {
     color: black;
@@ -68,9 +73,47 @@ body {
     padding: 0px 20px;
 }
 .content p:hover {
-    color:blue;
+    opacity: 0.9;
+}
+.row .Feature1 {
+    position: relative;
+    margin: 10px 10px 10px 10px;
+    background: url(../images/info.png) no-repeat center;
+    background-size: cover;
+    height:400px;
+    width: 33.333333%;
+    border: 1px solid black;
+}
+.row .Feature1:hover {
+    opacity: 0.6;
+    font-style: italic;
+}
+.row .Feature1 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+   
 }
 
+@media(max-width:1067px) {
+    .row .Feature1 {
+        width: 50%;
+        height: 300px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        width: auto;
+    }
+
+    #main .main-part {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+}
 @media (max-width: 767px) {
     #main .main-part {
         grid-template-columns: 1fr;
@@ -78,5 +121,13 @@ body {
 
     .navbar {
         height: auto;
+        position: static;
+        max-height: none;
+        width: auto;
+        overflow-y: visible;
+    }
+    .row .Feature1 {
+        width: 100%;
+        height: 300px;
     }
 }
